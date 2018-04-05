@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane onMouseDragged="#moveWindow" onMousePressed="#mousePressed" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/backgroudDesign.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Pane id="loginPane" prefHeight="400.0" prefWidth="310.0" stylesheets="@../../css/backgroudDesign.css">
+         <children>
+            <JFXTextField id="labelName" fx:id="inputName" layoutX="88.0" layoutY="105.0" prefHeight="25.0" prefWidth="198.0" promptText="Username" stylesheets="@../../css/backgroudDesign.css" unFocusColor="BLACK">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField id="psw" fx:id="inputPsw" layoutX="88.0" layoutY="190.0" prefHeight="25.0" prefWidth="198.0" promptText="Password" stylesheets="@../../css/backgroudDesign.css" unFocusColor="BLACK">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </JFXPasswordField>
+            <Button fx:id="btnLogin" layoutX="74.0" layoutY="295.0" mnemonicParsing="false" onAction="#logIn" prefHeight="32.0" prefWidth="163.0" text="Log In">
+               <font>
+                  <Font name="Bauhaus 93" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="29.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_User_Male_48px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="29.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Password_64px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelWrong" alignment="CENTER" layoutX="52.0" layoutY="248.0" prefHeight="21.0" prefWidth="233.0" textFill="#e50707">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="backgroudLogin" layoutX="310.0" prefHeight="400.0" prefWidth="293.0" stylesheets="@../../css/backgroudDesign.css">
+         <children>
+            <ImageView fx:id="close" fitHeight="32.0" fitWidth="36.0" layoutX="247.0" layoutY="14.0" onMousePressed="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

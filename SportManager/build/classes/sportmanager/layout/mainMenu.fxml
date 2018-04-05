@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" onMouseDragged="#moveWindow" onMousePressed="#mousePressed" prefHeight="661.0" prefWidth="1073.0" stylesheets="@../../css/backgroudDesign.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuController">
+   <children>
+      <Pane fx:id="pane" layoutX="-14.0" prefHeight="661.0" prefWidth="1102.0">
+         <children>
+            <ImageView fx:id="close" fitHeight="52.0" fitWidth="53.0" layoutX="1006.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="onePane" fx:id="onePane" layoutX="52.0" layoutY="165.0" onMouseClicked="#loadScene" onMouseEntered="#setBackgroundOnHover" onMouseExited="#setBackgroundOnMouseExit" prefHeight="329.0" prefWidth="308.0" stylesheets="@../../css/backgroudDesign.css">
+         <children>
+            <Label layoutX="33.0" layoutY="88.0" text="Create tournament" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="close1" fitHeight="89.0" fitWidth="97.0" layoutX="112.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Create_104px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="twoPane" fx:id="twoPane" layoutX="389.0" layoutY="165.0" onMouseClicked="#loadScene" onMouseEntered="#setBackgroundOnHover" onMouseExited="#setBackgroundOnMouseExit" prefHeight="329.0" prefWidth="308.0" stylesheets="@../../css/backgroudDesign.css">
+         <children>
+            <Label layoutX="50.0" layoutY="89.0" text="Edit tournament" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="close11" fitHeight="89.0" fitWidth="97.0" layoutX="110.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Edit_File_96px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="threePane" fx:id="threePane" layoutX="729.0" layoutY="165.0" onMouseEntered="#setBackgroundOnHover" onMouseExited="#setBackgroundOnMouseExit" prefHeight="329.0" prefWidth="308.0" stylesheets="@../../css/backgroudDesign.css">
+         <children>
+            <Label layoutX="112.0" layoutY="87.0" text="Games" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="close111" fitHeight="89.0" fitWidth="97.0" layoutX="110.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Soccer_Ball_96px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

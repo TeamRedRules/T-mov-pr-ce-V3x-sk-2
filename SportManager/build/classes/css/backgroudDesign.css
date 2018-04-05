@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27.3.2018, 17:34:10
+    Author     : skolniPC
+*/
+
+
+#backgroudLogin
+{
+    -fx-background-image: url("../image/fotoApp.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+    
+}
+#psw,#labelName,#tournamentName
+{
+    -fx-prompt-text-fill: white;
+    -fx-text-inner-color: white ;
+  
+    
+    
+    
+}
+#midPane
+{
+    -fx-background-color: #0a3477;
+ 
+}
+#pane,#bgTournament
+{
+    -fx-background-image: url("../image/backgroundMenu.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+
+}
+#onePane,#twoPane,#threePane
+{
+    
+    -fx-background-color: rgba(0,0,0,0.3);
+    
+    
+} 
+#loginPane{
+    
+ 
+    -fx-background-color: gray;
+}
+#onePane:hover,#twoPane:hover,#threePane:hover  
+{
+    
+    -fx-background-color: rgba(0,0,0,0.7);
+    -fx-border-color: black;
+    -fx-border-width: 5 ; 
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    
+}
+#pane1,#pane2,#pane3
+{
+    -fx-background-color: rgba(0,0,0,0.5)
+    
+    
+    
+}
+#paneVoleyball,#paneBasketball,#paneFlorball
+{
+    -fx-opacity: 0;
+
+}    
+
+#pane2,#pane3
+{
+    -fx-opacity:0;
+    
+   
+}
+
+
+#groupPlayOff,#groupOnly
+{
+    -fx-opacity:0;
+
+}
+#editTournamentPane
+{
+    -fx-background-color: rgba(0,0,0,0.5);
+    
+    
+    
+}
+#editPane
+{
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    
+    
+    
+}
+
+

@@ -1,0 +1,19 @@
+------------------------------------  Summary --------------------------------  5.4.2018  ----
+Pøidat Badminton a èeskou lokalizaci,
+
+Voleyball - Pøidat možnost výhry a) podle setù celkovì b) podle výherních setù) c) tie break a strop pro výhru, d) nastavení délky setù)
+Odstranit  registraci se jmény hraèù
+
+Pøidávání  týmù do applikace i z desktop
+
+Pøidat Jednoskupinový turnaj  a možnost nastavení  poètu her, možnost nastavení délky turnaje v dnech , max 2 zápasy den/tým , možnost výbìru délky finále atd ( BO5, BO3)
+
+WEB 
+-  možnost vložení podlakového fota turnaje s
+
+--------------------------------------------------------------------------------------------  
+
+
+
+
+  
