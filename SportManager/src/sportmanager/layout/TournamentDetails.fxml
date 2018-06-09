@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#moveWindow" onMouseMoved="#mousePressed" prefHeight="525.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TournamentDetailsController">
+   <children>
+      <Pane id="bgTournament" prefHeight="528.0" prefWidth="743.0" stylesheets="@../../css/backgroudDesign.css">
+         <children>
+            <Pane id="editTournamentPane" fx:id="pane1" layoutX="143.0" layoutY="47.0" prefHeight="434.0" prefWidth="458.0" stylesheets="@../../css/backgroudDesign.css">
+               <children>
+                  <Label layoutX="35.0" layoutY="176.0" text="Název Týmu" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="52.0" layoutY="186.0" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="19.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField id="teamName" fx:id="teamName" focusColor="WHITE" layoutX="153.0" layoutY="174.0" onKeyPressed="#enableButton" onKeyTyped="#enableButton" prefHeight="25.0" prefWidth="264.0" stylesheets="@../../css/CreateTournamentDesign.css" text="Zadej jméno týmu " />
+                  <Button fx:id="addTeamButton" disable="true" layoutX="124.0" layoutY="354.0" mnemonicParsing="false" onAction="#addTeam" prefHeight="25.0" prefWidth="210.0" text="Přidat tým">
+                     <font>
+                        <Font name="Berlin Sans FB" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <AnchorPane layoutX="-9.0" layoutY="-171.0" prefHeight="200.0" prefWidth="200.0" />
+            <ImageView fx:id="close" fitHeight="48.0" fitWidth="85.0" layoutX="681.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

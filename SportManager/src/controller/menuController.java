@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -25,13 +26,15 @@ import javafx.stage.Stage;
  *
  * @author skolniPC
  */
-public class menuController extends LoginController {
+public class menuController extends Movement implements Initializable {
     @FXML private AnchorPane AnchorPane;
     @FXML private Pane pane;
     @FXML private Pane onePane,twoPane,threePane;
     @FXML private Scene tournamentScene,editScene,gamesScene;
     @FXML private Stage primaryStage;
-
+    @FXML private ImageView close;
+    private double initialX,initialY;
+    @FXML private AnchorPane x;
     
     
     @FXML private void setBackgroundOnHover(MouseEvent mouse)
@@ -70,6 +73,14 @@ public class menuController extends LoginController {
         }
         
     }
+        
+ 
+    
+    
+    
+    
+    
+    
     
     @FXML private void setBackgroundOnMouseExit(MouseEvent event)
     {

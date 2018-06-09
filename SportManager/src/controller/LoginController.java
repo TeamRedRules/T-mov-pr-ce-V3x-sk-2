@@ -69,8 +69,6 @@ public class LoginController implements Initializable {
     {
         Stage stage = (Stage) close.getScene().getWindow();
         stage.close();
-    
-    
     }
     
    public void setDB(Connection con)
@@ -96,6 +94,7 @@ public class LoginController implements Initializable {
                      primaryStage = (Stage)((Node) event.getSource()).getScene().getWindow();
                      primaryStage.setScene(this.menuScene);
                      System.out.println("jede");
+                     this.con.close();
                      return true;
                  
                 

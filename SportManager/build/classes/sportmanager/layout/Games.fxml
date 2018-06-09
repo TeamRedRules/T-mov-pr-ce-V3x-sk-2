@@ -1,11 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamesController">
-    
+<AnchorPane fx:id="AnchorPane" onMouseDragged="#moveWindow" onMousePressed="#mousePressed" prefHeight="661.0" prefWidth="1073.0" stylesheets="@../../css/GamesDesign.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GamesController">
+   <children>
+      <Pane id="gamesBackground" fx:id="pane" layoutX="-14.0" prefHeight="661.0" prefWidth="1102.0" stylesheets="@../../css/GamesDesign.css">
+         <children>
+            <ImageView fx:id="close" fitHeight="52.0" fitWidth="53.0" layoutX="1006.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="74.0" fitWidth="54.0" layoutX="30.0" layoutY="13.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/icons8_Left_104px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="editTournamentPane" fx:id="pane1" layoutX="176.0" layoutY="27.0" prefHeight="627.0" prefWidth="760.0" stylesheets="@../../css/backgroudDesign.css">
+         <children>
+            <Label layoutX="299.0" layoutY="46.0" text=" I.  Typ turnaje" textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="34.0" />
+               </font>
+            </Label>
+            <JFXComboBox id="tournaments" fx:id="tournaments" focusColor="WHITE" layoutX="250.0" layoutY="255.0" prefHeight="42.0" prefWidth="335.0" promptText="Vyber turnaj " stylesheets="@../../css/GamesDesign.css" />
+            <Label layoutX="48.0" layoutY="268.0" prefHeight="29.0" prefWidth="118.0" text="Vyber turnaj " textFill="WHITE">
+               <font>
+                  <Font name="BebasNeueBold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="generateButton" layoutX="268.0" layoutY="515.0" onAction="#generateTournament" prefHeight="42.0" prefWidth="223.0" text="Vygeneruj turnaj" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

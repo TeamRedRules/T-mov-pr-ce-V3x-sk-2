@@ -16,7 +16,7 @@ and open the template in the editor.
     -fx-background-size: 100% 100%;
     
 }
-#psw,#labelName,#tournamentName
+#psw,#labelName,#tournamentName,#teamName
 {
     -fx-prompt-text-fill: white;
     -fx-text-inner-color: white ;
@@ -36,6 +36,16 @@ and open the template in the editor.
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100% 100%;
 
+}
+
+#brackets
+{
+    -fx-background-image: url("../image/backgroundBracket.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+    
+    
+    
 }
 #onePane,#twoPane,#threePane
 {
@@ -95,9 +105,6 @@ and open the template in the editor.
 {
     -fx-border-color: black;
     -fx-border-width: 2px;
-    
-    
-    
 }
 
 

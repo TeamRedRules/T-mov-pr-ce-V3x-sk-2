@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 5.4.2018, 13:00:40
+    Author     : skolniPC
+*/
+
+#subPane1,#subPane2,#subPane3
+{
+    
+    -fx-background-color: rgba(0,0,0,0.5);
+    
+    
+}
+
+#subPane2,#subPane3
+{
+    -fx-opacity:0;
+}
+
+
+#sportPaneBasketball,#sportPaneFloorball,#sportPaneVoleyball,#sportPaneBadminton,#typePaneTournament
+{
+    -fx-opacity:0;
+    
+    
+    
+}

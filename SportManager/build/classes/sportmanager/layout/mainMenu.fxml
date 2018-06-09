@@ -47,7 +47,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane id="threePane" fx:id="threePane" layoutX="729.0" layoutY="165.0" onMouseEntered="#setBackgroundOnHover" onMouseExited="#setBackgroundOnMouseExit" prefHeight="329.0" prefWidth="308.0" stylesheets="@../../css/backgroudDesign.css">
+      <Pane id="threePane" fx:id="threePane" layoutX="729.0" layoutY="165.0" onMouseClicked="#loadScene" onMouseEntered="#setBackgroundOnHover" onMouseExited="#setBackgroundOnMouseExit" prefHeight="329.0" prefWidth="308.0" stylesheets="@../../css/backgroudDesign.css">
          <children>
             <Label layoutX="112.0" layoutY="87.0" text="Games" textFill="WHITE">
                <font>

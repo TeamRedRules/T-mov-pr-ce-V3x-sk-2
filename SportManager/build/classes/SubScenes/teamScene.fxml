@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane id="pane1" fx:id="pane1" layoutX="83.0" layoutY="26.0" prefHeight="627.0" prefWidth="760.0" stylesheets="@../css/backgroudDesign.css">
+         <children>
+            <Label layoutX="178.0" layoutY="34.0" text=" 1/3 Choose type of tournament" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="34.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="left" fitHeight="52.0" fitWidth="52.0" layoutX="178.0" layoutY="167.0" onMousePressed="#menu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Left_104px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="308.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/loading%20full.png" />
+               </image>
+            </ImageView>
+            <Pane id="paneFootball" fx:id="paneFootball" layoutX="280.0" layoutY="104.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/backgroudDesign.css">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="53.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Soccer_Ball_96px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="64.0" layoutY="144.0" text="Football" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="paneBasketball" fx:id="paneBasketball" layoutX="280.0" layoutY="104.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/backgroudDesign.css">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="53.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Basketball_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="basketball" layoutX="54.0" layoutY="144.0" text="Basketball" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="paneFlorball" fx:id="paneFlorball" layoutX="280.0" layoutY="104.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/backgroudDesign.css">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="53.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Tennis_Ball_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="64.0" layoutY="144.0" text="Floorball" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="paneVoleyball" fx:id="paneVoleyball" layoutX="280.0" layoutY="104.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/backgroudDesign.css">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="53.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Beach_Ball_104px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="64.0" layoutY="144.0" text="Volleyball" textFill="#fff8f8">
+                     <font>
+                        <Font name="Berlin Sans FB" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="121.0" layoutY="448.0" text="Name of tournament" textFill="#fff8f8">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField id="tournamentName" fx:id="tournamentName" focusColor="#3d58c3" layoutX="341.0" layoutY="435.0" prefHeight="25.0" prefWidth="256.0" stylesheets="@../css/backgroudDesign.css" unFocusColor="#361e1e" />
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="364.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/loading%20free.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="415.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/loading%20free.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="right" fitHeight="52.0" fitWidth="52.0" layoutX="529.0" layoutY="167.0" onMousePressed="#menu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Right_104px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="next1" fitHeight="69.0" fitWidth="72.0" layoutX="637.0" layoutY="490.0" onMouseClicked="#nextSubScene" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Right_104px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="typeLeft" fitHeight="52.0" fitWidth="52.0" layoutX="178.0" layoutY="314.0" onMousePressed="#changeType" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Left_104px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="typeRight" fitHeight="52.0" fitWidth="52.0" layoutX="529.0" layoutY="312.0" onMousePressed="#changeType" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Right_104px.png" />
+               </image>
+            </ImageView>
+            <Pane id="playOff" fx:id="playOff" layoutX="280.0" layoutY="288.0" prefHeight="122.0" prefWidth="200.0" stylesheets="@../css/backgroudDesign.css">
+               <children>
+                  <Label layoutX="67.0" layoutY="86.0" text="Play Off" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="72.0" fitWidth="80.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Trophy_Cup_48px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane id="groupOnly" fx:id="groupOnly" layoutX="280.0" layoutY="288.0" prefHeight="122.0" prefWidth="200.0" stylesheets="@../css/backgroudDesign.css">
+               <children>
+                  <Label layoutX="56.0" layoutY="98.0" text="Group only" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="72.0" fitWidth="80.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Table_52px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane id="groupPlayOff" fx:id="groupPlayOff" layoutX="280.0" layoutY="288.0" prefHeight="122.0" prefWidth="200.0" stylesheets="@../css/backgroudDesign.css">
+               <children>
+                  <Label layoutX="36.0" layoutY="98.0" text="group + play Off" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="72.0" fitWidth="80.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_Tournament_50px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

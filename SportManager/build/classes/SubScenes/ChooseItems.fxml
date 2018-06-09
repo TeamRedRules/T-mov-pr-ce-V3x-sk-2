@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1097.0" style="-fx-background-color: rgba(0,0,0,0.5);;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane id="sportPaneVoleyball" fx:id="sportPaneVoleyball" layoutX="14.0" layoutY="14.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/CreateTournamentDesign.css">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="53.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Beach_Ball_104px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="144.0" text="Volleyball" textFill="#fff8f8">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="sportPaneFloorball" fx:id="sportPaneFloorball" layoutX="214.0" layoutY="14.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/CreateTournamentDesign.css">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="55.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Tennis_Ball_100px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="144.0" text="Floorball" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="sportPaneBasketball" fx:id="sportPaneBasketball" layoutX="399.0" layoutY="14.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/CreateTournamentDesign.css">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="53.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Basketball_100px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="basketball" layoutX="54.0" layoutY="144.0" text="Basketball" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="sportPaneFootball" fx:id="sportPaneFootball" layoutX="599.0" layoutY="14.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/CreateTournamentDesign.css">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="53.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Soccer_Ball_96px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="144.0" text="Football" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="typePaneTournament" fx:id="typePaneTournament" layoutX="20.0" layoutY="238.0" prefHeight="122.0" prefWidth="200.0" stylesheets="@../css/CreateTournamentDesign.css">
+         <children>
+            <Label layoutX="67.0" layoutY="98.0" text="Turnaj" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="72.0" fitWidth="80.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Trophy_Cup_48px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="typePaneGroups" fx:id="typePaneGroups" layoutX="233.0" layoutY="233.0" prefHeight="122.0" prefWidth="200.0" stylesheets="@../css/CreateTournamentDesign.css">
+         <children>
+            <Label layoutX="43.0" layoutY="98.0" text="pouze skupiny" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="72.0" fitWidth="80.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Table_52px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="sportPaneBadminton" fx:id="sportPaneBadminton" layoutX="772.0" layoutY="14.0" prefHeight="184.0" prefWidth="200.0" stylesheets="@../css/CreateTournamentDesign.css">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="110.0" layoutX="53.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Shuttercock_64px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="51.0" layoutY="145.0" text="Badminton" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -5,6 +5,8 @@
  */
 package sportmanager;
 
+import controller.EditController;
+import controller.GamesController;
 import controller.LoginController;
 import controller.TournamentController;
 import controller.menuController;
@@ -34,7 +36,10 @@ public class SportManager extends Application {
     private FXMLLoader menu;
     private FXMLLoader turnament;
     private FXMLLoader editTournament;
-    private FXMLLoader games,templateSports;
+    private FXMLLoader games;
+    private FXMLLoader advancedDetails;
+    private FXMLLoader bracket;
+    
     @Override
     public void start(Stage Stage) throws IOException {
         loginScene = new FXMLLoader(getClass().getResource("layout/login.fxml"));
@@ -59,22 +64,60 @@ public class SportManager extends Application {
         Parent gamesPane = games.load();
         Scene gamesScene = new Scene(gamesPane);
         
-        templateSports = new FXMLLoader(getClass().getResource("layout/Panes.fxml"));
-         
+        advancedDetails = new FXMLLoader(getClass().getResource("layout/TournamentDetails.fxml"));
+        Parent details = advancedDetails.load();
+        Scene advancedDetailsScene = new Scene(details);
+        
+        bracket = new FXMLLoader(getClass().getResource("layout/tournament.fxml"));
+        Parent brackets = bracket.load();
+        Scene bracketScene = new Scene(brackets);
+        
+        
+        
+        GamesController gamesController = (GamesController) games.getController();
+        gamesController.setScene(menuScene);
+        bracketScene.setUserData(this.bracket.getController());
+        gamesController.setBracketScene(bracketScene);
+        
+        
+        
+
         
         LoginController loginController = (LoginController) loginScene.getController();
         loginController.setScene(menuScene);
+        
         
         menuController menuController = (menuController) menu.getController();
         menuController.setScenes(turnamentScene,editScene,gamesScene);
         
         TournamentController tournamentController = (TournamentController) turnament.getController();
+        
         tournamentController.setScenes(menuScene);
+        
+        System.out.println("zkouska");
+      
+       
+        EditController editController = (EditController) editTournament.getController();
+        editController.setScene(menuScene);
+        editController.setController(gamesController);
+        
+        advancedDetailsScene.setUserData(advancedDetails.getController());
+        editController.addScene(advancedDetailsScene);
+      
+        tournamentController.setController(editController);
+        
+        
         
         
 
-       
-        
+      /* Tournament tournament = new Tournament("test",4);
+       for (int i = 0;i<4;i++)
+       {
+           tournament.addTeam(String.valueOf(i));
+           System.out.println(i);
+       }
+       tournament.createMatch();
+        */
         
      
 

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="919.0" style="-fx-background-color: rgba(0,0,0,0.5);;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane id="subPane3" fx:id="subPane3" layoutX="112.0" prefHeight="627.0" prefWidth="760.0" stylesheets="@../css/CreateTournamentDesign.css">
+         <children>
+            <Label layoutX="258.0" layoutY="33.0" text="3/3 Check setup " textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="34.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="308.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/loading%20full.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="teamsCountFinal" layoutX="275.0" layoutY="163.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="55.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="180.0" text="Number of teams" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="270.0" text=" players / team" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="363.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/loading%20full.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="playersCountFinal" layoutX="275.0" layoutY="254.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="55.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="previous" fitHeight="69.0" fitWidth="62.0" layoutX="69.0" layoutY="494.0" onMouseClicked="#setVisibility" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Left_104px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="gameNumber1" layoutX="60.0" layoutY="353.0" text="number of games" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="gameCountFinal" layoutX="275.0" layoutY="336.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="55.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="415.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/loading%20full.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameOfGame" layoutX="266.0" layoutY="110.0" text="Name of tournament" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="363.0" layoutY="180.0" text="Type of game" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="363.0" layoutY="270.0" prefHeight="27.0" prefWidth="214.0" text="Type of tournament" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="Check" fitHeight="62.0" fitWidth="62.0" layoutX="652.0" layoutY="494.0" onMousePressed="#menu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_Checkmark_52px_1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="typeFinal" layoutX="596.0" layoutY="272.0" prefHeight="27.0" prefWidth="175.0" text="--------------" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="gameFinal" layoutX="596.0" layoutY="181.0" prefHeight="27.0" prefWidth="148.0" text="--------------" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="363.0" layoutY="354.0" prefHeight="27.0" prefWidth="230.0" text="Number of Sets to win " textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="setsFinal" layoutX="596.0" layoutY="353.0" prefHeight="27.0" prefWidth="175.0" text="--------------" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

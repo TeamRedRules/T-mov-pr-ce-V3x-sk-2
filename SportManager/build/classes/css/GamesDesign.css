@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8.6.2018, 18:27:22
+    Author     : skolniPC
+*/
+
+#gamesBackground
+{
+    -fx-background-image: url("../image/backgroundBracket.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+
+#tournaments 
+{
+   
+  
+    -fx-fill: white;
+    -fx-background-color: gainsboro;
+   
+    
+    
+}
+.jfx-combo-box {
+	
+}
+
