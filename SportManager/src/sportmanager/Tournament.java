@@ -161,15 +161,26 @@ public class Tournament {
     }
     
     
-    public void loadMatches()
+    public void loadMatches() throws SQLException
     {
-    
-    
-    
-    
-    
-    
+        for(int i =0;i<this.teams.size();i++)
+        {
+            Team team = this.teams.get(i);
+            team.loadMatches();
+        
+        
+        }
     }
+    
+    
+    
+    public Team getSingleTeam(int index)
+    {
+        return this.teams.get(index);
+    }
+    
+    
+    
     public String getName()
     {
         return this.name.get();
@@ -180,6 +191,19 @@ public class Tournament {
         return this.team.get();
     }
     
+    public ArrayList getTeamNames()
+    {
+        ArrayList names = new ArrayList(this.getTeam());
+        for (int i =0; i< this.getTeam();i++)
+        {
+            names.add(this.teams.get(i).getName());
+        
+        }
+        return names;
+    
+    }
+    
+    
    public String getTournamentType()
     {
         return this.tournamentType.get();
@@ -188,6 +212,10 @@ public class Tournament {
    {
        return this.teams.size();
 
+   }
+   public ArrayList getTeamObjects()
+   {
+       return this.teams;
    }
    
    

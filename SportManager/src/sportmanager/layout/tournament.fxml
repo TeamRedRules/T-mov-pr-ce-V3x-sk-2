@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -9,17 +10,167 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="brackets" fx:id="AnchorPane" onMouseDragged="#moveWindow" onMousePressed="#mousePressed" prefHeight="661.0" prefWidth="1073.0" stylesheets="@../../css/backgroudDesign.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateBracketsController">
+<AnchorPane id="brackets" fx:id="AnchorPane" onMouseDragged="#moveWindow" onMousePressed="#mousePressed" prefHeight="690.0" prefWidth="1129.0" stylesheets="@../../css/backgroudDesign.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateBracketsController">
    <children>
-      <Pane fx:id="pane" layoutX="-14.0" prefHeight="661.0" prefWidth="1102.0">
+      <Pane fx:id="pane" layoutY="-1.0" prefHeight="690.0" prefWidth="1129.0">
          <children>
-            <ImageView fx:id="close" fitHeight="52.0" fitWidth="53.0" layoutX="1006.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../image/close.png" />
-               </image>
-            </ImageView>
+            <Pane id="editTournamentPane" fx:id="basePane" layoutX="33.0" layoutY="32.0" prefHeight="627.0" prefWidth="1063.0" stylesheets="@../../css/backgroudDesign.css">
+               <children>
+                  <Label layoutX="409.0" layoutY="14.0" text="Group tournament " textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1Label" layoutX="139.0" layoutY="103.0" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team2LabelTop" alignment="CENTER" layoutX="399.0" layoutY="110.0" text="Team 2" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team3LabelTop" alignment="CENTER" layoutX="587.0" layoutY="110.0" text="Team 3" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team4LabelTop" alignment="CENTER" layoutX="779.0" layoutY="110.0" text="Team 4" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelSide" alignment="CENTER" layoutX="14.0" layoutY="162.0" text="Team 1 " textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team2LabelSide" alignment="CENTER" layoutX="15.0" layoutY="254.0" text="Team 2" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team3LabelSide" alignment="CENTER" layoutX="15.0" layoutY="347.0" text="Team 3" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelTop" alignment="CENTER" layoutX="200.0" layoutY="110.0" text="Team 1" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="close" fitHeight="52.0" fitWidth="53.0" layoutX="997.0" layoutY="5.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/close.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="569.0" layoutY="159.0" prefHeight="40.0" prefWidth="129.0">
+                     <children>
+                        <TextField fx:id="in13A" layoutX="25.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <TextField fx:id="in13B" layoutX="75.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <Label fx:id="team1LabelTop11" layoutX="61.0" layoutY="4.0" text=":" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="pp13" layoutX="110.0" layoutY="17.0" text="PP" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="381.0" layoutY="159.0" prefHeight="40.0" prefWidth="129.0">
+                     <children>
+                        <TextField fx:id="in12B" layoutX="75.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <Label fx:id="team1LabelTop111" layoutX="61.0" layoutY="4.0" text=":" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="pp12" layoutX="110.0" layoutY="17.0" text="PP" />
+                        <TextField fx:id="in12A" layoutX="25.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="753.0" layoutY="159.0" prefHeight="40.0" prefWidth="129.0">
+                     <children>
+                        <TextField fx:id="in14A" layoutX="25.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <TextField fx:id="in14B" layoutX="75.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <Label fx:id="team1LabelTop1111" layoutX="61.0" layoutY="4.0" text=":" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="pp14" layoutX="110.0" layoutY="17.0" text="PP" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="581.0" layoutY="251.0" prefHeight="40.0" prefWidth="129.0">
+                     <children>
+                        <TextField fx:id="in23A" layoutX="25.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <TextField fx:id="in23B" layoutX="75.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <Label fx:id="team1LabelTop1112" layoutX="61.0" layoutY="4.0" text=":" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="pp23" layoutX="110.0" layoutY="17.0" text="PP" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="753.0" layoutY="251.0" prefHeight="40.0" prefWidth="129.0">
+                     <children>
+                        <TextField fx:id="in24A" layoutX="25.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <TextField fx:id="in24B" layoutX="75.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <Label fx:id="team1LabelTop11121" layoutX="61.0" layoutY="4.0" text=":" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="pp24" layoutX="110.0" layoutY="17.0" text="PP" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="753.0" layoutY="344.0" prefHeight="40.0" prefWidth="129.0">
+                     <children>
+                        <TextField fx:id="in34A" layoutX="25.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <TextField fx:id="in34B" layoutX="75.0" layoutY="8.0" prefHeight="25.0" prefWidth="24.0" />
+                        <Label fx:id="team1LabelTop111211" layoutX="61.0" layoutY="4.0" text=":" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="pp34" layoutX="110.0" layoutY="17.0" text="PP" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="team1LabelTop1" alignment="CENTER" layoutX="191.0" layoutY="162.0" text="---------" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelTop12" alignment="CENTER" layoutX="191.0" layoutY="254.0" text="---------" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelTop121" alignment="CENTER" layoutX="393.0" layoutY="254.0" text="---------" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelTop1211" alignment="CENTER" layoutX="191.0" layoutY="347.0" text="---------" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelTop12111" alignment="CENTER" layoutX="393.0" layoutY="347.0" text="---------" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelTop121111" alignment="CENTER" layoutX="581.0" layoutY="347.0" text="---------" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
          </children>
       </Pane>
-      <Pane id="editTournamentPane" fx:id="basePane" layoutX="176.0" layoutY="27.0" prefHeight="627.0" prefWidth="760.0" stylesheets="@../../css/backgroudDesign.css" />
    </children>
 </AnchorPane>

@@ -7,6 +7,7 @@ package sportmanager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -25,7 +26,7 @@ public class Match {
         this.powerPlay = powerPlay;
         this.team = team;
         this.teamID = teamID;
-        this.saveMatch();
+        
     }
     
      public void saveMatch() throws SQLException
@@ -41,16 +42,28 @@ public class Match {
         conn.close();
         
        this.conn = DBconnection.connectToDB();
-       String sql2 = "INSERT INTO Tym_Zapas() Values(?,?,?,?)";
+       String sql2 = "INSERT INTO Tym_Zapas(IDZapas,IDTym1,IDTym2) Values(?,?,?)";
        PreparedStatement stmt2 = conn.prepareStatement(sql2);
-        stmt.setInt(1,this.IDtournament);
-        stmt.setInt(3,team.getTeamID());
-        stmt.setInt(2,this.teamID);
-        stmt.executeUpdate();
+        stmt2.setInt(1,this.getMatchID());
+        stmt2.setInt(3,team.getTeamID());
+        stmt2.setInt(2,this.teamID);
+        stmt2.executeUpdate();
         conn.close();
         
     }
 
+     
+     
+     public int getMatchID() throws SQLException
+     {
+         this.conn = DBconnection.connectToDB();
+         String sql3 = "SELECT max(Zapas.IDZapas) from Zapas";
+        ResultSet rs =conn.createStatement().executeQuery(sql3);
+        int result = rs.getInt(1);
+        this.conn.close();
+        return result;
+     }
+     
     @Override
     public String toString() {
         return "Match{" + "IDtournament=" + IDtournament + ", score1=" + score1 + ", score2=" + score2 + ", powerPlay=" + powerPlay + '}';

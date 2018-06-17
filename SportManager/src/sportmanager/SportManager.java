@@ -39,6 +39,7 @@ public class SportManager extends Application {
     private FXMLLoader games;
     private FXMLLoader advancedDetails;
     private FXMLLoader bracket;
+    private FXMLLoader loader6,loader8;
     
     @Override
     public void start(Stage Stage) throws IOException {
@@ -70,14 +71,29 @@ public class SportManager extends Application {
         
         bracket = new FXMLLoader(getClass().getResource("layout/tournament.fxml"));
         Parent brackets = bracket.load();
-        Scene bracketScene = new Scene(brackets);
+        Scene scene4 = new Scene(brackets);
         
+        
+        /// TOURNAMENT SCENE 6/4/8 teams
+        loader8 =   new FXMLLoader(getClass().getResource("layout/Tournament8.fxml"));
+        
+        Parent parent8 = loader8.load();
+        Scene scene8 = new Scene(parent8);
+        
+        
+        loader6 =  new FXMLLoader(getClass().getResource("layout/Tournament6.fxml"));
+        Parent parent6 = loader6.load();
+        Scene scene6 = new Scene(parent6);
         
         
         GamesController gamesController = (GamesController) games.getController();
         gamesController.setScene(menuScene);
-        bracketScene.setUserData(this.bracket.getController());
-        gamesController.setBracketScene(bracketScene);
+       
+        
+        scene4.setUserData(this.bracket.getController());
+        scene6.setUserData(this.loader6.getController());
+        scene8.setUserData(this.loader8.getController());
+        gamesController.setTournamentScenes(scene4,scene6,scene8);
         
         
         

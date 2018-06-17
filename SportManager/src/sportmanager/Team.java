@@ -61,11 +61,17 @@ public class Team {
     
     
     }
+    
+    public String getName()
+    {
+        return this.teamName;
+    }
     public int getTeamID() throws SQLException
     {
-     
+     this.conn =DBconnection.connectToDB();
        ResultSet rs =conn.createStatement().executeQuery("SELECT ID FROM Tym WHERE NazevTymu = '" + this.teamName + "'");
        int result = rs.getInt(1);
+       conn.close();
        
        return result;
     
@@ -74,8 +80,9 @@ public class Team {
     }
     
     public void createMatch(Team team) throws SQLException
-    {
-        this.matchArray.add(new Match(this.tournamentID,0,0,0,team,this.getTeamID()));
+    {   Match match = new Match(this.tournamentID,0,0,0,team,this.getTeamID());
+        match.saveMatch();
+        this.matchArray.add(match);
         System.out.println(" Pole zápasů " +matchArray);
        
         
@@ -86,6 +93,22 @@ public class Team {
     @Override
     public String toString() {
         return "Team{" + "teamName=" + teamName + ", score=" + score + '}';
+    }
+
+    void loadMatches() throws SQLException {
+        
+        String sql = "Select Zapas.Vysledek1,Zapas.Prodlouzeni, Zapas.Vysledek2 From Zapas, Tym_Zapas WHERE Tym_Zapas.IDTym1 =='" + this.getTeamID() +"' and Tym_Zapas.IDZapas = Zapas.IDZapas";
+        this.conn = DBconnection.connectToDB();
+        ResultSet rs = conn.createStatement().executeQuery(sql);
+        
+        while(rs.next())
+        {
+            this.matchArray.add(new Match(this.tournamentID,rs.getInt(1),rs.getInt(3),rs.getInt(2),this,this.getTeamID()));
+            System.out.println(matchArray);
+        
+        }
+        this.conn.close();
+       
     }
     
     

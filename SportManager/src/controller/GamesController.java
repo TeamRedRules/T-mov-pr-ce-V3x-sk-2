@@ -42,8 +42,11 @@ public class GamesController extends Movement implements Initializable {
     private ObservableList<Tournament> options;
     @FXML
     private JFXComboBox<Tournament> tournaments;
-    private Scene scene;
-    private CreateBracketsController brController;
+    private Scene scene4,scene6,scene8;
+    private CreateBracketsController controller4;
+    private Tournament6Controller controller6;
+    private Tournament8Controller controller8;
+    // private Controller6,Controller8;
     private Connection conn;
     
     @FXML
@@ -74,8 +77,10 @@ public class GamesController extends Movement implements Initializable {
          try {
            ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM Turnaj WHERE Status='Running'");
             while (rs.next())
-        {
-            this.options.add(new Tournament(rs.getString(2),rs.getInt(3),rs.getString(5),rs.getString(4),rs.getInt(6),rs.getString(7)));   
+        {   Tournament tourn = new Tournament(rs.getString(2),rs.getInt(3),rs.getString(5),rs.getString(4),rs.getInt(6),rs.getString(7));
+            tourn.addTeam();
+            tourn.loadMatches();
+            this.options.add(tourn);   
             
  
         }
@@ -89,11 +94,43 @@ public class GamesController extends Movement implements Initializable {
     
     @FXML private void generateTournament() throws IOException
     {
+         Stage stage = new Stage();
+         // TURNAJ M8 4 Týmy
+        if(this.tournaments.getSelectionModel().getSelectedItem().getTeam() == 4)
+        {
+             
+             stage.setScene(scene4);
+             stage.initStyle(StageStyle.UNDECORATED);
+             controller4.setTournament(this.tournaments.getSelectionModel().getSelectedItem());
         
-        Stage stage = new Stage();
-        stage.setScene(scene);
+        
+        }
+        // TURNAJ Má 6 týmu
+        else if(this.tournaments.getSelectionModel().getSelectedItem().getTeam() == 6)
+        {
+            stage.setScene(scene6);
+            stage.initStyle(StageStyle.UNDECORATED);
+            controller6.setTournament(this.tournaments.getSelectionModel().getSelectedItem());
+        
+            
+            System.out.println("6 týmů");
+        }
+        
+        // 8 týmů
+        else
+        {
+              stage.setScene(scene8);
+            stage.initStyle(StageStyle.UNDECORATED);
+          controller8.setTournament(this.tournaments.getSelectionModel().getSelectedItem());
+            
+        
+        
+        
+        }
+       
+     
         stage.initStyle(StageStyle.UNDECORATED);
-        // pass choosen tournament ;
+      //brController.setTournament(this.tournaments.getSelectionModel().getSelectedItem());
        
       
         stage.show();
@@ -103,13 +140,15 @@ public class GamesController extends Movement implements Initializable {
     
     }
     
-    public void setBracketScene(Scene scene)
+    public void setTournamentScenes(Scene scene,Scene scene2, Scene scene3)
     {
     
-        this.scene = scene;
-        brController =  (CreateBracketsController) scene.getUserData();
-        
-    
+        this.scene4 = scene;
+        this.scene6 = scene2;
+        this.scene8 = scene3;
+        controller4=  (CreateBracketsController) scene.getUserData();
+        controller6  =(Tournament6Controller) scene2.getUserData();
+        controller8 = (Tournament8Controller) scene3.getUserData();
     }
     
    

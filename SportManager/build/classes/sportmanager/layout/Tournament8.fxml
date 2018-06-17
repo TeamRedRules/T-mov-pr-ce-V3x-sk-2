@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="brackets" fx:id="AnchorPane" onMouseDragged="#moveWindow" onMousePressed="#mousePressed" prefHeight="706.0" prefWidth="1137.0" stylesheets="@../../css/backgroudDesign.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Tournament8Controller">
+   <children>
+      <Pane fx:id="pane" layoutX="-14.0" prefHeight="706.0" prefWidth="1204.0">
+         <children>
+            <Pane id="editTournamentPane" fx:id="basePane" layoutX="10.0" layoutY="17.0" prefHeight="674.0" prefWidth="1181.0" stylesheets="@../../css/backgroudDesign.css">
+               <children>
+                  <Label layoutX="409.0" layoutY="14.0" text="Group tournament " textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1Label" layoutX="139.0" layoutY="103.0" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team2LabelTop" layoutX="264.0" layoutY="110.0" text="Team 2" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team3LabelTop" layoutX="397.0" layoutY="120.0" text="Team 3" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team4LabelTop" layoutX="519.0" layoutY="110.0" text="Team 4" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelSide" layoutX="14.0" layoutY="162.0" text="Team 1 " textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team2LabelSide" layoutX="10.0" layoutY="233.0" text="Team 2" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team3LabelSide" layoutX="9.0" layoutY="304.0" text="Team 3" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team4LabelSide" layoutX="8.0" layoutY="377.0" text="Team 4" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelTop" layoutX="183.0" layoutY="110.0" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team1LabelTop" layoutX="147.0" layoutY="120.0" text="Team 1" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="close" fitHeight="52.0" fitWidth="53.0" layoutX="1095.0" layoutY="5.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/close.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="team5LabelTop" layoutX="653.0" layoutY="120.0" text="Team 5" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team6LabelTop" layoutX="780.0" layoutY="110.0" text="Team 6" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team5LabelSide" layoutX="9.0" layoutY="450.0" text="Team 5" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team6LabelSide" layoutX="9.0" layoutY="514.0" text="Team 6" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team7LabelSide" layoutX="10.0" layoutY="588.0" text="Team 7" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team7LabelTop" layoutX="911.0" layoutY="120.0" text="Team 7" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="team8LabelTop" layoutX="1049.0" layoutY="110.0" text="Team 8" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -192,6 +192,7 @@ public class EditController extends Movement implements Initializable{
           
  
         }
+            this.conn.close();
        
        } catch (SQLException ex) {
            Logger.getLogger(EditController.class.getName()).log(Level.SEVERE, null, ex);
